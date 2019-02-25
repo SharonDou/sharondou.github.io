@@ -130,7 +130,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature   Experient Set:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-25T17:52:44.934Z">
+<meta property="og:updated_time" content="2019-02-25T20:08:06.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A&#x2F;B Testing - Udacity">
 <meta name="twitter:description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature   Experient Set:">
@@ -422,6 +422,21 @@ Standard \ Deviation = \sqrt{\frac{p(1-p)}{N}}
 <li>Compare Two Samples<br> $$<pre><code>P&apos;_{pool} = \frac{X_{count}+X_{experiment}}{N_{count}+N_{experiment}}\\
 Standard \ Deviation= \sqrt{P&apos;_{pool}*(1-P&apos;_{pool})*(\frac{1}{N_{count}}+\frac{1}{N_{experiment}})}
 </code></pre> $$</li>
+<li>How many page views (sample size)<br> $$<pre><code>\alpha = P(reject\ null\ |\ null\ is\ true)\\
+\beta =  P(fail\ to\ reject\ null\ |\ null\ is\ false)\\
+sensitivity = 1 - \beta\ (often\ 80\%)
+</code></pre> $$<ul>
+<li>Small Sample: $\alpha$ is low, $\beta$ is high</li>
+<li>Large Sample: $\alpha$ is same, $\beta$ is lower</li>
+<li><span style="color:blue"><b>How to calculate the page views(sample size)</b></span><ol>
+<li>built-in library</li>
+<li>look up answer in a table</li>
+<li>Use online calculator - Sample Size Calculator<br>(enter: practical significance, $1-\beta$, $\alpha$)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Analyze the Result</li>
 </ol>
 </li>
 </ol>
