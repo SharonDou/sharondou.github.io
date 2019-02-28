@@ -123,17 +123,17 @@
 
 
 
-<meta name="description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature   Experient Set:">
+<meta name="description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A&#x2F;B Testing - Udacity">
 <meta property="og:url" content="http://yoursite.com/2019/02/21/Udacity/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature   Experient Set:">
+<meta property="og:description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-25T20:08:06.345Z">
+<meta property="og:updated_time" content="2019-02-28T22:28:30.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A&#x2F;B Testing - Udacity">
-<meta name="twitter:description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature   Experient Set:">
+<meta name="twitter:description" content="##Overview    What is A/B Testing  Definiton A general methodology using online when you plan to test a new product or a feature    Two groups  Control Set: existing product / feature">
 
 
 
@@ -363,7 +363,15 @@
       
 
       
-        <p>##Overview  </p>
+        
+
+	<div class="row">
+    <embed src="additional_techniques.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>##Overview  </p>
 <ol>
 <li><p><strong><span style="color: blue">What is A/B Testing</span></strong></p>
 <ol>
@@ -436,11 +444,131 @@ sensitivity = 1 - \beta\ (often\ 80\%)
 </li>
 </ul>
 </li>
-<li>Analyze the Result</li>
+<li>Analyze the Result </li>
 </ol>
 </li>
 </ol>
 </li>
+</ol>
+<h2 id="Policies-and-Ethics"><a href="#Policies-and-Ethics" class="headerlink" title="Policies and Ethics"></a>Policies and Ethics</h2><ol>
+<li><strong><span style="color: blue">Four main principles to consider </span></strong>  <pre><code>1. **Risk**: minimal risk: risk you have in daily life
+2. **Benefit**
+3. **Choice**
+4. **Privacy /  Accessing data sensitivity**
+    * Are users informed?
+    * What user identifiers are tied to the data?
+    * What types of data are being collected?
+    * What is the level of confideentialty and security?  
+    &lt;span style = &quot;color: purple&quot;&gt;一般来说如果数据密集到一定程度，可以认为是not sensitive的&lt;/span&gt;
+</code></pre></li>
+</ol>
+<h2 id="Metrics-for-Experiments"><a href="#Metrics-for-Experiments" class="headerlink" title="Metrics for Experiments"></a>Metrics for Experiments</h2><ol>
+<li><strong><span style="color: blue">How to Define A Metrics</span></strong><ol>
+<li><code>Two main Use Cases</code><ol>
+<li><strong>Invariant Tracking / Sanity Checking Metrics</strong> 完整性检查指标<br> These metrics wont change in the experiment group and control group. (i.e. populaiton, sample size, distribution)</li>
+<li><strong>Evaluation Metrics</strong> 评价指标<ol>
+<li><span style="color: purple">Overall Business Metrics</span> (i.e. profit, market share, how many users)</li>
+<li><span style="color: purple">More Detailed Metrics</span> (i.e. measure user experience of a specific product)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>High-Level Concept for Metrics</code><ul>
+<li>Lets foucs on an example, and to see how it work.  <ol>
+<li>Firstly, we start from our business objective.<ul>
+<li>Audacity cares about helping students find the job in finance.</li>
+<li>Financial substainability  </li>
+</ul>
+</li>
+<li>Make the customer funnel more detailed<br> <span style="color: orange">Fewer and fewer users do down into the funnel. Each stage is a metric. <span style="color: purple"><strong>Absolute Number</strong></span> of users who reach that point. <span style="color: purple"><strong>Rates or Probabilities</strong></span> want to increase rate of progression.</span><ul>
+<li>Homepage visits</li>
+<li>Exploring the site<ul>
+<li>Users who view course list</li>
+<li>Users who view course details</li>
+</ul>
+</li>
+<li>Create an account<ul>
+<li>Users who enroll in a course</li>
+<li>Users who finish Lesson1, Lesson2, etc</li>
+<li>Users who sign up for coaching at various level</li>
+</ul>
+</li>
+<li>Completing a course<ul>
+<li>Users who enroll in a second course</li>
+<li>Users who get a job</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><code>Choosing Metrics</code><ul>
+<li>Lets foucs on an example, and to see how it work.  <ol>
+<li>Objective1: Update a description on a course list page<ul>
+<li>Primary Metrics: Probability of progressing from course list page to course page</li>
+<li>Secondary Metrics: Continued progression down the funnel</li>
+</ul>
+</li>
+<li>Objective2: Increase size of “Start Now” button<ul>
+<li>Primary Metrics: Click-Through-Rate on “Start Now” button</li>
+</ul>
+</li>
+<li>Objective3: Explain benefits of paid service<ul>
+<li>Primary Metrics: Probability that enrolled students pay for coaching</li>
+<li>Secondary Metrics: User retention among each time period</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><code>Dealing with Difficult Metrics</code><ol>
+<li>Reason of difficulties<ol>
+<li>Don’t have access to the data</li>
+<li>Takes too long to collect</li>
+</ol>
+</li>
+<li>Techniques of defining metrics (pdf)<ol>
+<li>Impact<ul>
+<li>Generating new metrics</li>
+<li>Validating possible metrics</li>
+</ul>
+</li>
+<li>Techniques<ol>
+<li>External Data</li>
+<li>Own Data</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>Gathering Additional Data</code><ol>
+<li><span style="color: blue">User Experience Research (UER)</span> <ul>
+<li>Better to get detailed / deep infomation</li>
+<li>Can use special equipment</li>
+</ul>
+</li>
+<li><span style="color: blue">Focused Groups 焦点小组访谈</span><ul>
+<li>More people</li>
+<li>Cannot get detailed infomation with each of them</li>
+</ul>
+</li>
+<li><span style="color: blue">Surveys</span> <ul>
+<li>Useful for metrics that you could not directly measure</li>
+<li>Cannot directly compare with other results</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li>How to build Intuition</li>
+<li>Characterzie</li>
 </ol>
 
       
@@ -526,8 +654,17 @@ sensitivity = 1 - \beta\ (often\ 80\%)
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -587,6 +724,22 @@ sensitivity = 1 - \beta\ (often\ 80\%)
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Policies-and-Ethics"><span class="nav-number">1.</span> <span class="nav-text">Policies and Ethics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Metrics-for-Experiments"><span class="nav-number">2.</span> <span class="nav-text">Metrics for Experiments</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
